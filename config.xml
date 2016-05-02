@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ionicframework.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
+    <description>
+        An Ionic Framework and Cordova project.
+    </description>
+    <author email="you@example.com" href="http://example.com.com/">
+      Your Name Here
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    
+    <!-- Ionic supports Android Jellybean and up --> 
+    <preference name="android-minSdkVersion" value="16" />
+
+    <!-- Don't store local data in an iCloud backup. Turn this to "cloud" to enable storage 
+         to be sent to iCloud. Note: enabling this could result in Apple rejecting your app.
+    -->
+    <preference name="BackupWebStorage" value="none" />
+
+    <feature name="StatusBar">
+      <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+</widget>
