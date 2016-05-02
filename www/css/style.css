@@ -241,19 +241,21 @@
 }
 
 .tinder-button {
-  width: 70px;
-  height:70px;
-  border-radius: 70px;
+  width: 80px;
+  height:80px;
+  border-radius: 80px;
   background: #FFF;
-  border: 5px solid #f0f0f0;
+  border: 6px solid #f0f0f0;
   float: left;
   box-shadow: 1px 1px 1px 0px #e9e9e9;
 }
-
+.tinder-button.activated {
+    box-shadow: inset 0 0 0 1px #e9e9e9,inset 0 1px 15px #e9e9e9;
+}
 .tinder-button:nth-child(1) {
   margin-left: 4px;
   background: url(../img/delete.png);
-  background-size: 25px;
+  background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -262,7 +264,7 @@
 .tinder-button:nth-child(3) {
   margin-left: -4px;
   background: url(../img/heart.png);
-  background-size: 25px;
+  background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
 }
