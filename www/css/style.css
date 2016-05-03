@@ -1,10 +1,111 @@
+.font-200{
+  font-size:200%;
+}
+.bar.bar-stable{
+  background: white;
+}
+.bg-white{
+  background: white;
+}
+.bold{
+  font-weight: 600;
+}
+.uppercase{
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.light-seperator{
+  background-color: #eee;
+  border: 0 none;
+  color: #eee;
+  height: 1px;
+}
+.item-hr{
+    border-top: 0.1em solid #F8F8F8;
+    margin-top: 1em;
+    margin-bottom: -1.0em;
+    width: 350%;
+}
+
+/* === Color Themes === */
+.color-gray {
+  color: #8e8e93 !important;
+}
+.color-stable{
+  color: #f8f8f8 !important;
+}
+.bg-color-stable{
+  background-color: #f8f8f8 !important;
+}
+
+.bg-color-gray {
+  background-color: #F7F7F7 !important;
+}
+
+
+.border-color-gray {
+  color: black !important;
+  border:1px dotted #8e8e93 !important;
+}
+.color-red {
+  color: #ff3b30 !important;
+}
+.color-coral{
+  color: #e55 !important;
+}
+
+.bg-color-red {
+  background-color: #ff3b30 !important;
+}
+.color-white {
+  color: #ffffff !important;
+}
+.color-yellow {
+  color: #ffcc00 !important;
+}
+.bg-color-plyellow {
+  background-color: #ffcc00 !important;
+}
+.bg-color-purple {
+  background-color: #9696fd !important;
+}
+.bg-color-yellow {
+  background-color: #fdfd96 !important;
+}
+.color-green {
+  color: #4cd964 !important;
+}
+
+.color-darkgreen{
+  color: #228B22 !important;
+}
+.bg-color-darkgreen{
+  background-color: #228B22 !important;
+}
+
+
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
 .radar {
   margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
   height: 100px;
-  /** height is required as absolute value **/
   background-color: #F08080;
   border-radius: 100px;
   position:relative;

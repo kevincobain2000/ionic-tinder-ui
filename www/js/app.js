@@ -22,8 +22,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
-
+.config(function ($provide, $ionicConfigProvider, $compileProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
+  // $ionicConfigProvider.scrolling.jsScrolling(false);
+  // $translateProvider.useStaticFilesLoader({
+  //     prefix: 'l10n/',
+  //     suffix: '.json'
+  //   });
+  // $translateProvider.preferredLanguage("en");
+  // $translateProvider.fallbackLanguage("en");
+  $ionicConfigProvider.scrolling.jsScrolling(false);
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|cdvfile|file|filesystem|blob):|data:image\//);
+  $ionicConfigProvider.backButton.text(null).icon('ion-arrow-left-c color-coral');
+})
 .config(function($stateProvider, $urlRouterProvider) {
+
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router

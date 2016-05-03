@@ -3,12 +3,18 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope, $log) {
   $scope.like = like
   $scope.info = info
+  $scope.slideHasChanged = slideHasChanged
 
   function like(param){
     $log.info(param)
   }
   function info(){
     $log.info('info popup');
+  }
+
+  function slideHasChanged(index){
+    console.log(":slide has changed")
+    console.log(index)
   }
 })
 
