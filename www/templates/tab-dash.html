@@ -13,7 +13,7 @@
   <!-- <ion-content class="padding"> -->
 
 
-  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="2">
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="1">
     <ion-slide>
       <div class="box yellow"><h1>YELLOW</h1></div>
     </ion-slide>
@@ -22,7 +22,7 @@
         <div class="buttons">
           <button class="button button-clear icon ion-person color-gray"></button>
         </div>
-        <h1 class="title">Tinder!</h1>
+        <h1 class="title color-red">Tinder!</h1>
         <div class="buttons">
           <button class="button  button-clear">
             <button class="button button-clear icon ion-chatbubbles color-gray"></button>
@@ -45,11 +45,11 @@
     <ion-slide>
       <ion-header-bar align-title="center" class="bar-stable">
         <h1 class="title">
-          <i class="ion-chatbubbles color-gray font-200"></i>
+          <i class="ion-chatbubbles color-red font-200"></i>
         </h1>
       </ion-header-bar>
       <ion-content>
-        <div class="item-input-inset animated fadeIn">
+        <div class="item-input-inset">
           <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
             <input force-lower-case type="text" class="bold" placeholder="Search" ng-model="search" ng-value="search" ng-change="filterResults(search)">
@@ -67,8 +67,8 @@
         <ion-list>
             <ion-item class="item-light item-text-wrap item-avatar item-borderless item-icon-right" data-ng-repeat="blog in ['ben', 'max', 'mike', 'perry','ben', 'max', 'mike', 'perry'] track by $index" style="overflow:hidden;">
               <img ng-src="img/{{blog}}.png">
-              <h2 class="capitalize">{{blog}}</h2>
-              <p class="color-gray capitalize">Sent you a message</p>
+              <h2 class="capitalize font-115">{{blog}}</h2>
+              <p class="capitalize color-gray">Sent you a message</p>
               <hr class="item-hr">
             </ion-item>
         </ion-list>
