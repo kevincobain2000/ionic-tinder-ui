@@ -15,7 +15,14 @@
 
   <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="1">
     <ion-slide>
-      <div class="box yellow"><h1>YELLOW</h1></div>
+        <ion-header-bar align-title="center" class="bar-stable">
+        <h1 class="title">
+          <i class="ion-person color-red font-200"></i>
+        </h1>
+      </ion-header-bar>
+      <ion-content>
+        <div class="box yellow"><h1>YELLOW</h1></div>
+      </ion-content>
     </ion-slide>
     <ion-slide>
       <ion-header-bar align-title="center" class="bar-stable">
