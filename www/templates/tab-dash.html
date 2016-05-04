@@ -63,17 +63,17 @@
 
       </ion-header-bar>
 
-<!--           <div class="radar">
+          <div class="radar" ng-if="!cards.length">
             <img ng-src="img/adam.png" width="100" height="100">
-          </div> -->
-          <div class="layered-paper">
-              <img ng-src="img/max.png">
+          </div>
+          <div class="layered-paper animated fadeIn" ng-if="cards.length" ng-click="showMyProfile()">
+              <img ng-src="img/ben.png">
               <a class="item dark" href="#">
                 Adam, 26
               </a>
           </div>
 
-          <div class="tinder-buttons">
+          <div class="tinder-buttons animated fadeIn" ng-if="cards.length">
               <div class="tinder-button" ng-click="like(false)"></div>
 
               <div class="info" ng-click="info()"></div>

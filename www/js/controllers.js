@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $log, $rootScope, $ionicModal) {
+.controller('DashCtrl', function($scope
+                                , $log
+                                , $rootScope
+                                , $ionicModal
+                                , $ionicSlideBoxDelegate
+                                , $timeout) {
   $scope.like = like
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
@@ -15,16 +20,17 @@ angular.module('starter.controllers', [])
   }
 
   function slideHasChanged(index){
-    console.log(":slide has changed")
-    console.log(index)
-    $rootScope.fadeIn = false;
-    $rootScope.fadeOut = false;
   }
 
+  $timeout(function(){
+    $scope.cards = [1]
+  }, 1000)
+
+  showMyProfile();
   function showMyProfile() {
     $ionicModal.fromTemplateUrl('templates/modals/my-profile.html', {
       scope: $scope,
-      animation: 'animated custom',
+      animation: 'animated fadeIn',
       hideDelay:920
     }).then(function(modal) {
       $scope.modal = modal;
