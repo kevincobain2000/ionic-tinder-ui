@@ -166,8 +166,112 @@ hr{
     border: 4px solid white;
 }
 
+.profile-container .profile-edit:active {
+    position:absolute;
+    left: 90px;
+    right: 0;
+    top: 60px;
+    margin:0 auto;
+    z-index: 3;
+    border-radius: 50%;
+    border: 7px solid white;
+}
+
+.profile-container .profile-image:active {
+  border: 4px solid white;
+}
+
+/*buttons*/
+
+.tinder-buttons {
+  width: 200px;
+  margin-top: 27px;
+  margin-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tinder-button {
+  width: 80px;
+  height:80px;
+  border-radius: 80px;
+  background: #FFF;
+  border: 6px solid #f0f0f0;
+  float: left;
+  box-shadow: 1px 1px 1px 0px #e9e9e9;
+  transition: background-size .2s ease-in-out;
+}
+.tinder-button.activated {
+    box-shadow: inset 0 0 0 1px #e9e9e9,inset 0 1px 30px #e9e9e9;
+    background-size: 20px !important;
+    transition: background-size .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+.tinder-button:nth-child(1) {
+  margin-left: 4px;
+  background: url(../img/delete.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.tinder-button:nth-child(3) {
+  margin-left: -4px;
+  background: url(../img/heart.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #FFF;
+  border: 5px solid #f0f0f0;
+  float: left;
+  box-shadow: 1px 1px 1px 0px #e9e9e9;
+  margin-top: 14px;
+  margin-left: -4px;
+
+  background: url(../img/info.png);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.layered-paper {
+    background: white;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.15), 
+        0 10px 0 -5px white, 
+        0 10px 1px -4px rgba(0,0,0,0.15), 
+        0 20px 0 -10px white, 
+        0 20px 1px -9px rgba(0,0,0,0.15);
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+  height: 420px;
+  position:relative;
+  border-radius: 10px;
+}
+.layered-paper img{
+  width: 100%;
+  height: 85%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+.layered-paper .item{
+  margin-top: -6px !important;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;  
+}
 .radar {
   margin-top: 200px;
+  margin-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
@@ -398,71 +502,10 @@ hr{
 
 
 
-/*buttons*/
-
-.tinder-buttons {
-  width: 200px;
-  margin-top: 250px;
-  margin-bottom: 120px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tinder-button {
-  width: 80px;
-  height:80px;
-  border-radius: 80px;
-  background: #FFF;
-  border: 6px solid #f0f0f0;
-  float: left;
-  box-shadow: 1px 1px 1px 0px #e9e9e9;
-  transition: background-size .2s ease-in-out;
-}
-.tinder-button.activated {
-    box-shadow: inset 0 0 0 1px #e9e9e9,inset 0 1px 30px #e9e9e9;
-    background-size: 20px !important;
-    transition: background-size .2s ease-in-out;
-    transition: box-shadow .2s ease-in-out;
-}
-.tinder-button:nth-child(1) {
-  margin-left: 4px;
-  background: url(../img/delete.png);
-  background-size: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 
-.tinder-button:nth-child(3) {
-  margin-left: -4px;
-  background: url(../img/heart.png);
-  background-size: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.info {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  background: #FFF;
-  border: 5px solid #f0f0f0;
-  float: left;
-  box-shadow: 1px 1px 1px 0px #e9e9e9;
-  margin-top: 14px;
-  margin-left: -4px;
-
-  background: url(../img/info.png);
-  background-size: 15px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 
-.animated.modal.custom.ng-leave {
-    -webkit-animation-name:zoomOut;
-    animation-name:zoomOut;
-}
 .animated.modal.bounceIn.ng-leave {
     -webkit-animation-name:bounceOut;
     animation-name:bounceOut;
@@ -490,8 +533,8 @@ hr{
 }
 
 .animated.modal.fadeIn.ng-leave {
-    -webkit-animation-name:fadeOut;
-    animation-name:fadeOut;
+    -webkit-animation-name:zoomOut;
+    animation-name:zoomOut;
 }
 .animated.modal.fadeInDown.ng-leave {
     -webkit-animation-name:fadeOutDown;
@@ -604,4 +647,73 @@ hr{
 .animated.modal.rollIn.ng-leave {
     -webkit-animation-name:rollOut;
     animation-name:rollOut;
+}
+
+
+td-cards {
+  display: block;
+}
+
+td-card {
+  position: absolute;
+  left: 50%;
+  margin-top: 80px;
+  /*margin-bottom: 40px;*/
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+
+  border: 1px solid #999;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+/*
+td-card.card-0 {
+  -webkit-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+  top: 0px;
+  z-index: 10;
+}
+td-card.card-1 {
+  -webkit-transform: translate3d(0, 4px, 0);
+  transform: translate3d(0, 4px, 0);
+  z-index: 9;
+}
+td-card.card-2 {
+  -webkit-transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 8px, 0);
+  z-index: 8;
+}
+*/
+
+td-card .image {
+  position: relative;
+}
+
+td-card img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.yes-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: rgb(111, 250, 111);
+  opacity: 0;
+}
+.no-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: rgb(255, 115, 115);
+  opacity: 0;
+}
+
+.fade {
+  -webkit-transition: 0.2s opacity linear;
+  transition: 0.2s opacity linear;
+  opacity: 0;
 }
