@@ -143,7 +143,7 @@ h4, h5, h6, p {
 }
 
 .radar {
-  margin-top: 150px;
+  margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
@@ -161,6 +161,7 @@ h4, h5, h6, p {
   color:white;
   text-shadow:-1px -1px #333;
   border-radius: 50%;
+  border: 4px solid white;
 }
 
 .radar:after,
