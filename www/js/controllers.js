@@ -1,9 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $log, $rootScope) {
+.controller('DashCtrl', function($scope, $log, $rootScope, $ionicModal) {
   $scope.like = like
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
+  $scope.showMyProfile = showMyProfile
+
 
   function like(param){
     $log.info(param)
@@ -18,6 +20,20 @@ angular.module('starter.controllers', [])
     $rootScope.fadeIn = false;
     $rootScope.fadeOut = false;
   }
+
+  function showMyProfile() {
+    $ionicModal.fromTemplateUrl('templates/modals/my-profile.html', {
+      scope: $scope,
+      animation: 'animated custom',
+      hideDelay:920
+    }).then(function(modal) {
+      $scope.modal = modal;
+      $scope.modal.show();
+      $scope.hideMyProfile = function(){
+        $scope.modal.hide();
+      }
+    });
+  };
 })
 
 
