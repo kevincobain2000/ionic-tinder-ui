@@ -13,15 +13,45 @@
   <!-- <ion-content class="padding"> -->
 
 
-  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="1">
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="0" ion-slide-tabs>
     <ion-slide>
         <ion-header-bar align-title="center" class="bar-stable">
-        <h1 class="title">
-          <i class="ion-person color-red font-200"></i>
-        </h1>
-      </ion-header-bar>
+
+          <h1 class="title">
+            <i class="ion-person color-red font-200"></i>
+          </h1>
+
+        </ion-header-bar>
       <ion-content>
-        <div class="box yellow"><h1>YELLOW</h1></div>
+        <div class="profile-container">
+          <img ng-src="img/ben.png" class="profile-image" width="100">
+          <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png" class="profile-edit" width="50">
+        </div>
+
+          <div class="text-center padding" style="margin-top:22px;">
+            <h3>Ben</h3>
+            <h4>Ionic</h4>
+            <p class="color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="color-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <ion-list class="text-center uppercase">
+            <ion-item class="color-red" style="top: 30px;">
+              Edit Profile
+            </ion-item>
+            <ion-item class="color-red" style="top: 30px;">
+              Settings
+            </ion-item>
+            <ion-item class="color-pastel-blue" style="top: 30px;">
+              Get Tinder Plus
+            </ion-item>
+          </ion-list>
       </ion-content>
     </ion-slide>
     <ion-slide>
@@ -30,11 +60,15 @@
           <button class="button button-clear icon ion-person color-gray"></button>
         </div>
         <h1 class="title color-red">Tinder!</h1>
+
+
+
         <div class="buttons">
-          <button class="button  button-clear">
-            <button class="button button-clear icon ion-chatbubbles color-gray"></button>
-          </button>
+            <button class="button button-clear icon ion-chatbubbles color-gray "></button>
         </div>
+
+
+
       </ion-header-bar>
 
           <div class="radar">
@@ -51,9 +85,13 @@
     </ion-slide>
     <ion-slide>
       <ion-header-bar align-title="center" class="bar-stable">
+
+
         <h1 class="title">
-          <i class="ion-chatbubbles color-red font-200"></i>
+          <i class="ion-chatbubbles font-200"></i>
         </h1>
+
+
       </ion-header-bar>
       <ion-content>
         <div class="item-input-inset">

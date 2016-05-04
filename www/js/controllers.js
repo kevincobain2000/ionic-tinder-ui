@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $log) {
+.controller('DashCtrl', function($scope, $log, $rootScope) {
   $scope.like = like
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
@@ -15,6 +15,8 @@ angular.module('starter.controllers', [])
   function slideHasChanged(index){
     console.log(":slide has changed")
     console.log(index)
+    $rootScope.fadeIn = false;
+    $rootScope.fadeOut = false;
   }
 })
 
