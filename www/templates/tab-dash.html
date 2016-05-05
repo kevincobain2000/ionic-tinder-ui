@@ -10,7 +10,7 @@
         </ion-header-bar>
       <ion-content>
         <div class="profile-container">
-          <img ng-click="showSettings()" ng-src="img/ben.png" class="profile-image" width="100">
+          <img ng-click="showProfile()" ng-src="img/ben.png" class="profile-image" width="100">
           <img
             ng-click="showSettings()"
             src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png"
@@ -66,11 +66,9 @@
           <div class="radar" ng-if="!cards.length">
             <img ng-src="img/adam.png" width="100" height="100">
           </div>
-          <div class="layered-paper animated fadeIn" ng-if="cards.length" ng-click="showMyProfile()">
+          <div class="layered-paper animated fadeIn" ng-if="cards.length" ng-click="showProfile()">
               <img ng-src="img/ben.png">
-              <a class="item dark" href="#">
-                Adam, 26
-              </a>
+              <h3 class="item">Adam, 26</h3>
           </div>
 
           <div class="tinder-buttons animated fadeIn" ng-if="cards.length">
@@ -95,7 +93,7 @@
         <div class="item-input-inset">
           <label class="item-input-wrapper">
             <i class="icon ion-ios-search placeholder-icon"></i>
-            <input force-lower-case type="text" class="bold" placeholder="Search" ng-model="search" ng-value="search" ng-change="filterResults(search)">
+            <input force-lower-case type="text" class="bold" placeholder="Search 7 Matches" ng-model="search" ng-value="search" ng-change="filterResults(search)">
           </label>
           <button class="button button-stable button-clear" ng-click="filterResults(null);search=null">
             Cancel

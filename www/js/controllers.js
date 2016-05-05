@@ -5,12 +5,14 @@ angular.module('starter.controllers', [])
                                 , $rootScope
                                 , $ionicModal
                                 , $ionicSlideBoxDelegate
+                                , $ionicActionSheet
                                 , $timeout) {
   $scope.like = like
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
   $scope.showProfile = showProfile
   $scope.showSettings = showSettings
+  $scope.showActionSheet = showActionSheet
 
 
   function like(param){
@@ -40,6 +42,28 @@ angular.module('starter.controllers', [])
       }
     });
   };
+
+
+    function showActionSheet() {
+
+      // Show the action sheet
+      var hideSheet = $ionicActionSheet.show({
+       buttons: [
+         { text: 'Mute Notifications' }
+         , { text: 'Report as Spam' }
+         , { text: 'Unmatch Ben' }
+         , { text: "Show Ben's Profile" }
+       ],
+       cancelText: '<span class="color-white">Cancel</span>',
+       cssClass: 'tinder-actionsheet',
+       cancel: function() {
+            // add cancel code..
+          },
+       buttonClicked: function(index) {
+         return true;
+       }
+     });
+  }
 
   function showSettings() {
     $ionicModal.fromTemplateUrl('templates/modals/settings.html', {
