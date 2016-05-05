@@ -1,75 +1,90 @@
 <ion-modal-view>
   <ion-header-bar>
-    <h1 class="title color-red">Edit Info</h1>
+    <h1 class="title">Settings</h1>
     <button class="button button-clear button-assertive" ng-click="hideSettings()">
       Done
     </button>
   </ion-header-bar>
   <ion-content class="bg-color-stable">
     <div class="list">
-
-      <div class="row">
-        <div class="col col-66">
-          <img class="img-rounded" ng-src="img/ben.png" alt="" width="100%"  ng-click="addPhotos()">
-        </div>
-        <div class="col col-33">
-          <img class="img-rounded" ng-src="img/adam.png" alt="" width="100%" ng-click="addPhotos()">
-          <img class="img-rounded" ng-src="img/max.png" alt="" width="100%" ng-click="addPhotos()" style="margin-top: 4px;">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-33">
-          <img class="img-rounded" ng-src="http://backgroundidea.info/wp-content/uploads/2015/03/solid-gray-background-colors-solid-grey-background---viewing-gallery-wallpaper-hd.gif" alt="" width="100%" ng-click="addPhotos()">
-        </div>
-        <div class="col col-33">
-          <img class="img-rounded" ng-src="img/mike.png" alt="" width="100%" ng-click="addPhotos()">
-        </div>
-        <div class="col col-33">
-          <img class="img-rounded" ng-src="img/perry.png" alt="" width="100%" ng-click="addPhotos()">
-        </div>
-      </div>
-
-
-
-        <div class="list list-borderless">
-          <label class="item item-input">
-            <input type="text" name="" value="" placeholder="Nickname" class="font-130 gotham-medium">
-          </label>
-          <label class="item item-input">
-            <input type="text" name="" value="" placeholder="Where You work" class="font-110">
-          </label>
-        </div>
-        <h4 class="padding gotham-medium color-darkgray">About</h4>
-        <label class="item item-input">
-          <textarea ng-change="showSubmitButton()"
-          ng-model="profile.attributes.about"
-          placeholder="Status"
-          class="about-me"
-          msd-elastic></textarea>
-        </label>
-        <h4 class="padding gotham-medium color-darkgray font-110">Current Work</h4>
-        <ion-item class="item-icon-right color-gray">
-          Ionic
-          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        <p style="margin-top: 8px;">&nbsp;</p>
+        <ion-item class="text-center color-red">
+          Get Tinder Plus
         </ion-item>
 
-        <h4 class="padding gotham-medium color-darkgray font-110">School</h4>
-        <ion-item class="item-icon-right color-gray">
-          Somewhere University
-          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        <p style="margin-top: 8px;">&nbsp;</p>
+        <div class="padding color-gray">Discovery Settings</div>
+
+        <ion-item class="item-icon-right">
+          <span class="gotham-book">Location</span>
+          <span class="item-note color-darkgray gotham-book">Tokyo</span>
+          <i class="icon ion-ios-arrow-forward color-gray font-130 bold"></i>
         </ion-item>
 
-        <h4 class="padding gotham-medium color-darkgray font-110">Show My Instagram Photos</h4>
-        <ion-item class="item-icon-right color-red  gotham-light">
-          Connect Instagram
+        <ion-item class="item-icon-right">
+          <span class="gotham-book">Gender</span>
+          <span class="item-note color-gray gotham-medium">Only Women</span>
+          <i class="icon ion-ios-arrow-forward color-gray font-130 bold"></i>
         </ion-item>
 
-        <h4 class="padding gotham-medium color-darkgray font-110">Gender</h4>
-        <ion-item class="item-icon-right color-gray">
-          Male
-          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        <p style="margin-top: 8px;">&nbsp;</p>
+        <ion-toggle  ng-model="myToggle" ng-change="highQualityChanged(toggle)" toggle-class="toggle-assertive" ng-checked='toggle'>
+          <span class="color-black-light bold">Show me in Discovery</span>
+        </ion-toggle>
+        <p class="padding color-gray">When blah Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+        <p style="margin-top: 8px;">&nbsp;</p>
+        <div class="padding color-gray">Notifications</div>
+        <ion-toggle  ng-model="myToggle" ng-change="highQualityChanged(toggle)" toggle-class="toggle-assertive">
+          <span class="color-black-light bold">New Matches</span>
+        </ion-toggle>
+        <ion-toggle  ng-model="myToggle" ng-change="highQualityChanged(toggle)" toggle-class="toggle-assertive">
+          <span class="color-black-light bold">Messages</span>
+        </ion-toggle>
+        <ion-toggle  ng-model="myToggle" ng-change="highQualityChanged(toggle)" toggle-class="toggle-assertive">
+          <span class="color-black-light bold">Messages Likes</span>
+        </ion-toggle>
+        <ion-toggle  ng-model="myToggle" ng-change="highQualityChanged(toggle)" toggle-class="toggle-assertive">
+          <span class="color-black-light bold">Super Likes</span>
+        </ion-toggle>
+
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <div class="padding color-gray">CONTACT US</div>
+        <ion-item class="text-center gotham-book">Help & Support</ion-item>
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <ion-item class="text-center gotham-book">Give Us Feedback</ion-item>
+
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <ion-item class="text-center gotham-book">Share Tinder</ion-item>
+
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <div class="padding color-gray">Legal</div>
+        <ion-item class="item-icon-right gotham-book">
+          Privacy Policy
+          <i class="icon ion-ios-arrow-forward color-gray font-130 bold"></i>
         </ion-item>
-        <span style="margin: 10px;"></span>
+        <ion-item class="item-icon-right gotham-book">
+          Terms of Service
+          <i class="icon ion-ios-arrow-forward color-gray font-130 bold"></i>
+        </ion-item>
+        <ion-item class="item-icon-right gotham-book">
+          Licenses
+          <i class="icon ion-ios-arrow-forward color-gray font-130 bold"></i>
+        </ion-item>
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <ion-item class="text-center gotham-book">Logout</ion-item>
+
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <p class="text-center">
+          <i class="ion-fireball text-center color-red" style="font-size:42px;"></i>
+        </p>
+        <p class="text-center">
+          Version 5.0.1
+        </p>
+        <p style="margin-top: 4px;">&nbsp;</p>
+        <ion-item class="text-center gotham-book">Delete Account</ion-item>
+        <p style="margin-top: 10px;">&nbsp;</p>
+
     </div>
   </ion-content>
 </ion-modal-view>

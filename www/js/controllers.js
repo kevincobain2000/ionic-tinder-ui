@@ -11,8 +11,13 @@ angular.module('starter.controllers', [])
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
   $scope.showProfile = showProfile
+  $scope.showEditProfile = showEditProfile
   $scope.showSettings = showSettings
   $scope.showActionSheet = showActionSheet
+
+  $scope.myToggle = true;
+
+  $scope.slideIndex = 0
 
 
   function like(param){
@@ -22,7 +27,9 @@ angular.module('starter.controllers', [])
     $log.info('info popup');
   }
 
+
   function slideHasChanged(index){
+    $scope.slideIndex = index
   }
 
   $timeout(function(){
@@ -64,6 +71,21 @@ angular.module('starter.controllers', [])
        }
      });
   }
+
+  function showEditProfile() {
+    $ionicModal.fromTemplateUrl('templates/modals/edit-profile.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+      hideDelay:920
+    }).then(function(modal) {
+      $scope.modalSettings = modal;
+      $scope.modalSettings.show();
+      $scope.hideSettings = function(){
+        $scope.modalSettings.hide();
+      }
+    });
+  };
+
 
   function showSettings() {
     $ionicModal.fromTemplateUrl('templates/modals/settings.html', {
