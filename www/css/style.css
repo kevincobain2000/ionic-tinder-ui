@@ -1,3 +1,6 @@
+img{
+  object-fit: cover;
+}
 @font-face {
   font-family: 'gotham-bold';
   src: url('../fonts/GothamRounded-Bold.otf');
@@ -36,18 +39,50 @@ hr{
     margin: 1em 0;
     padding: 0;
 }
+textarea.about-me{
+  resize: none !important;
+  min-height:100px;
+  max-height:150px;
+  font-size: 110%;
+}
+.gotham-medium{
+  font-family: 'gotham-medium';
+}
+.gotham-light{
+  font-family: 'gotham-light';
+}
 .font-120{
   font-size: 120% !important;
+}
+.font-200{
+  font-size: 200% !important;
+}
+.font-80{
+  font-size: 80% !important;
+}
+.font-130{
+  font-size: 130% !important;
+}
+
+.img-rounded{
+  border-radius: 5px;
 }
 
 .margin-top-5{
   margin-top: 5px;
 }
+.font-110{
+  font-size:110% !important;
+}
 .font-115{
   font-size:115% !important;
 }
-.font-200{
-  font-size:200%;
+.font-150{
+  font-size:150% !important;
+}
+
+.font-120{
+  font-size:120% !important;
 }
 .bar.bar-stable{
   background: white;
@@ -56,7 +91,7 @@ hr{
   background: white;
 }
 .bold{
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .uppercase{
   text-transform: uppercase;
@@ -81,6 +116,9 @@ hr{
 /* === Color Themes === */
 .color-gray {
   color: #8e8e93 !important;
+}
+.color-darkgray{
+  color: #4d4f53 !important;
 }
 .color-pastel-blue {
   color: #779ECB !important;

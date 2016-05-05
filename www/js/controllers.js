@@ -9,7 +9,8 @@ angular.module('starter.controllers', [])
   $scope.like = like
   $scope.info = info
   $scope.slideHasChanged = slideHasChanged
-  $scope.showMyProfile = showMyProfile
+  $scope.showProfile = showProfile
+  $scope.showSettings = showSettings
 
 
   function like(param){
@@ -26,17 +27,30 @@ angular.module('starter.controllers', [])
     $scope.cards = [1]
   }, 1000)
 
-  showMyProfile();
-  function showMyProfile() {
-    $ionicModal.fromTemplateUrl('templates/modals/my-profile.html', {
+  function showProfile() {
+    $ionicModal.fromTemplateUrl('templates/modals/profile.html', {
       scope: $scope,
       animation: 'animated fadeIn',
       hideDelay:920
     }).then(function(modal) {
-      $scope.modal = modal;
-      $scope.modal.show();
-      $scope.hideMyProfile = function(){
-        $scope.modal.hide();
+      $scope.modalProfile = modal;
+      $scope.modalProfile.show();
+      $scope.hideProfile = function(){
+        $scope.modalProfile.hide();
+      }
+    });
+  };
+
+  function showSettings() {
+    $ionicModal.fromTemplateUrl('templates/modals/settings.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+      hideDelay:920
+    }).then(function(modal) {
+      $scope.modalSettings = modal;
+      $scope.modalSettings.show();
+      $scope.hideSettings = function(){
+        $scope.modalSettings.hide();
       }
     });
   };

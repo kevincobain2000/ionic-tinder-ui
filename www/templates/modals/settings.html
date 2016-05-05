@@ -1,0 +1,75 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title color-red">Edit Info</h1>
+    <button class="button button-clear button-assertive" ng-click="hideSettings()">
+      Done
+    </button>
+  </ion-header-bar>
+  <ion-content class="bg-color-stable">
+    <div class="list">
+
+      <div class="row">
+        <div class="col col-66">
+          <img class="img-rounded" ng-src="img/ben.png" alt="" width="100%"  ng-click="hideSettings()">
+        </div>
+        <div class="col col-33">
+          <img class="img-rounded" ng-src="img/adam.png" alt="" width="100%" ng-click="hideSettings()">
+          <img class="img-rounded" ng-src="img/max.png" alt="" width="100%" ng-click="hideSettings()" style="margin-top: 4px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-33">
+          <img class="img-rounded" ng-src="http://backgroundidea.info/wp-content/uploads/2015/03/solid-gray-background-colors-solid-grey-background---viewing-gallery-wallpaper-hd.gif" alt="" width="100%" ng-click="hideSettings()">
+        </div>
+        <div class="col col-33">
+          <img class="img-rounded" ng-src="img/mike.png" alt="" width="100%" ng-click="hideSettings()">
+        </div>
+        <div class="col col-33">
+          <img class="img-rounded" ng-src="img/perry.png" alt="" width="100%" ng-click="hideSettings()">
+        </div>
+      </div>
+
+
+
+        <div class="list list-borderless">
+          <label class="item item-input">
+            <input type="text" name="" value="" placeholder="Nickname" class="font-130 gotham-medium">
+          </label>
+          <label class="item item-input">
+            <input type="text" name="" value="" placeholder="Where You work" class="font-110">
+          </label>
+        </div>
+        <h4 class="padding gotham-medium color-darkgray">About</h4>
+        <label class="item item-input">
+          <textarea ng-change="showSubmitButton()"
+          ng-model="profile.attributes.about"
+          placeholder="Status"
+          class="about-me"
+          msd-elastic></textarea>
+        </label>
+        <h4 class="padding gotham-medium color-darkgray font-110">Current Work</h4>
+        <ion-item class="item-icon-right color-gray">
+          Ionic
+          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        </ion-item>
+
+        <h4 class="padding gotham-medium color-darkgray font-110">School</h4>
+        <ion-item class="item-icon-right color-gray">
+          Somewhere University
+          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        </ion-item>
+
+        <h4 class="padding gotham-medium color-darkgray font-110">Show My Instagram Photos</h4>
+        <ion-item class="item-icon-right color-red  gotham-light">
+          Connect Instagram
+        </ion-item>
+
+        <h4 class="padding gotham-medium color-darkgray font-110">Gender</h4>
+        <ion-item class="item-icon-right color-gray">
+          Male
+          <i class="icon ion-ios-arrow-forward font-130 bold"></i>
+        </ion-item>
+        <span style="margin: 10px;"></span>
+    </div>
+  </ion-content>
+</ion-modal-view>
