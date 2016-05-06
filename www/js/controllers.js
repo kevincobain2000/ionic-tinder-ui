@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
 
   $scope.myToggle = true;
 
-  $scope.slideIndex = 0
+  $scope.slideIndex = 1
 
 
   function like(param){
@@ -34,7 +34,7 @@ angular.module('starter.controllers', [])
 
   $timeout(function(){
     $scope.cards = [1]
-  }, 1000)
+  }, 3000)
 
   function showProfile() {
     $ionicModal.fromTemplateUrl('templates/modals/profile.html', {
