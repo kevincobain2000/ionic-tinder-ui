@@ -27,6 +27,14 @@ angular.module('starter.controllers', [])
     $log.info('info popup');
   }
 
+  $scope.onTouch = function(){
+    $ionicSlideBoxDelegate.enableSlide(false);
+    console.log('touched');
+  }
+  $scope.onRelease = function(){
+    $ionicSlideBoxDelegate.enableSlide(true);
+    console.log('released');
+  }
 
   function slideHasChanged(index){
     $scope.slideIndex = index

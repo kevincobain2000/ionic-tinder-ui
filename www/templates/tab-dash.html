@@ -53,7 +53,7 @@
           <div class="radar" ng-if="!cards.length">
             <img ng-src="img/adam.png" width="100" height="100">
           </div>
-          <div class="layered-paper animated fadeIn" ng-if="cards.length" can-swipe="false" ng-click="showProfile()">
+          <div on-touch="onTouch()" on-release="onRelease()" class="layered-paper animated fadeIn" ng-if="cards.length" can-swipe="false" ng-click="showProfile()">
               <img ng-src="img/ben.png">
               <h3 class="item">Adam, 26</h3>
           </div>
