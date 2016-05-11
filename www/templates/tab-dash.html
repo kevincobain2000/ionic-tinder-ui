@@ -50,21 +50,57 @@
 
     <ion-slide>
 
-          <div class="radar" ng-if="!cards.length">
+<!--           <div class="radar" ng-if="!cards.length">
             <img ng-src="img/adam.png" width="100" height="100">
           </div>
           <div on-touch="onTouch()" on-release="onRelease()" class="layered-paper animated fadeIn" ng-if="cards.length" can-swipe="false" ng-click="showProfile()">
               <img ng-src="img/ben.png">
               <h3 class="item">Adam, 26</h3>
+          </div> -->
+
+
+
+
+          <!-- *************************
+            TD Cards
+            - We start off with an ng-if so that the cards are not generated
+              unless $scope.cards is not 'null'
+          ************************* -->
+          <div ng-if="cards.active">
+            <td-cards on-touch="onTouch()" on-release="onRelease()" ng-click="showProfile()">
+              <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)">
+                <div class="image">
+                  <div class="no-text">NOPE</div>
+                  <div class="yes-text">LIKE</div>
+                  <!-- *************************
+                    Discard
+                    - The card is removed from the deck and a fly away animation is triggered.
+                    - onClickTransitionOut is found in ionic.tdcards.js
+                    - Animation can be customized by changing defaults
+                  ************************* -->
+                  <!-- <div class="discard" ng-click="onClickTransitionOut(card)">DISCARD</div> -->
+                  <img ng-src="{{ card.image }}">
+                  <h3 class="item">Adam, 26</h3>
+                </div>
+              </td-card>
+              <!-- *************************
+                End Card
+                - 'drag' is set to false. The user cannot drag it.
+                - 'refreshCards()' reloads all cards that have NOT been discarded.
+              ************************* -->
+              <td-card id="end-card" drag="false">
+                <i class="icon ion-ios-refresh color-gray disable-user-behavior" ng-click="refreshCards()"></i>
+              </td-card>
+            </td-cards>
           </div>
 
-          <div class="tinder-buttons animated fadeIn" ng-if="cards.length">
+          <div class="tinder-buttons animated fadeIn" ng-if="cards.active">
               <div class="tinder-button" ng-click="like(false)"></div>
 
               <div class="info" ng-click="info()"></div>
 
               <div class="tinder-button" ng-click="like(true)"></div>
-            </div>
+          </div>
     </ion-slide>
     <ion-slide>
       <ion-content>

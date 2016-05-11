@@ -10,6 +10,7 @@ angular.module('starter', ['ionic',
                           , 'starter.services'
                           , 'starter.directives'
                           , 'monospaced.elastic'
+                          , 'ionic.contrib.ui.tinderCards2'
               ])
 
 .run(function($ionicPlatform) {
