@@ -45,6 +45,10 @@ textarea.about-me{
   max-height:150px;
   font-size: 110%;
 }
+
+.header-logo{
+  margin-top: 4px;
+}
 .gotham-bold{
   font-family: 'gotham-bold';
 }

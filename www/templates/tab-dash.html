@@ -5,7 +5,8 @@
           <button class="button button-clear icon ion-person animated {{slideIndex == 0 ? 'color-red' : 'color-gray'}}"></button>
         </div>
         <h1 class="title {{slideIndex ==1 ? 'color-red' : 'color-gray'}}" ng-click="slideTo(1)">
-          <i class="ion-fireball font-200" style="line-height: 1.5;"></i>
+          <img ng-if="slideIndex ==1" ng-src="img/tinder.png" class="header-logo">
+          <img ng-if="slideIndex !=1" ng-src="img/tinder_gray.png" class="header-logo">
         </h1>
         <div class="buttons" ng-click="slideTo(2)">
             <button class="button button-clear icon ion-chatbubbles animated {{slideIndex == 2 ? 'color-red' : 'color-gray'}}"></button>
@@ -19,7 +20,7 @@
           <img ng-click="showProfile()" ng-src="img/ben.png" class="profile-image" width="100">
           <img
             ng-click="showEditProfile()"
-            src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png"
+            ng-src="img/edit.png"
             class="profile-edit"
             width="50">
         </div>
