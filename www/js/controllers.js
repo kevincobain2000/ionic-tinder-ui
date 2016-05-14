@@ -72,10 +72,6 @@ angular.module('starter.controllers', [])
     $scope.cards.liked.push(card);
   };
 
-  $scope.onClickTransitionLeft = function($event, card){
-    $scope.swipeCard.onClickTransitionOut();
-  }
-
   function like(param){
     $log.info(param)
   }
