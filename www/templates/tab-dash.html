@@ -5,8 +5,7 @@
           <button class="button button-clear icon ion-person animated {{slideIndex == 0 ? 'color-red' : 'color-gray'}}"></button>
         </div>
         <h1 class="title {{slideIndex ==1 ? 'color-red' : 'color-gray'}}" ng-click="slideTo(1)">
-          <img ng-if="slideIndex ==1" ng-src="img/tinder.png" class="header-logo">
-          <img ng-if="slideIndex !=1" ng-src="img/tinder_gray.png" class="header-logo">
+          <img ng-src="img/tinder.png" class="header-logo">
         </h1>
         <div class="buttons" ng-click="slideTo(2)">
             <button class="button button-clear icon ion-chatbubbles animated {{slideIndex == 2 ? 'color-red' : 'color-gray'}}"></button>
