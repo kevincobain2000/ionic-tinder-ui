@@ -15,10 +15,16 @@ angular.module('starter.controllers', [])
   $scope.showEditProfile = showEditProfile
   $scope.showSettings = showSettings
   $scope.showActionSheet = showActionSheet
+  $scope.slideTo = slideTo
 
   $scope.myToggle = true;
 
   $scope.slideIndex = 1
+
+
+  function slideTo(index){
+    $ionicSlideBoxDelegate.slide(index);
+  }
 
   var cardTypes = [
     { image: 'http://c4.staticflickr.com/4/3924/18886530069_840bc7d2a5_n.jpg' },
@@ -89,6 +95,7 @@ angular.module('starter.controllers', [])
   }
 
   function slideHasChanged(index){
+    console.log('slideHasChanged')
     $scope.slideIndex = index
   }
 

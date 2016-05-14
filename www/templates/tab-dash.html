@@ -1,13 +1,13 @@
 <ion-view view-title="Dashboard" hide-nav-bar="true">
       <ion-header-bar align-title="center" class="bar-stable">
 
-        <div class="buttons">
+        <div class="buttons" ng-click="slideTo(0)">
           <button class="button button-clear icon ion-person animated {{slideIndex == 0 ? 'color-red' : 'color-gray'}}"></button>
         </div>
-        <h1 class="title {{slideIndex ==1 ? 'color-red' : 'color-gray'}}">
+        <h1 class="title {{slideIndex ==1 ? 'color-red' : 'color-gray'}}" ng-click="slideTo(1)">
           <i class="ion-fireball font-200" style="line-height: 1.5;"></i>
         </h1>
-        <div class="buttons">
+        <div class="buttons" ng-click="slideTo(2)">
             <button class="button button-clear icon ion-chatbubbles animated {{slideIndex == 2 ? 'color-red' : 'color-gray'}}"></button>
         </div>
 
