@@ -10,6 +10,7 @@ angular.module('starter', ['ionic',
                           , 'starter.services'
                           , 'starter.directives'
                           , 'monospaced.elastic'
+                          , 'ksSwiper'
                           , 'ionic.contrib.ui.tinderCards2'
               ])
 

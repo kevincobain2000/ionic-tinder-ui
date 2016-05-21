@@ -123,7 +123,17 @@
             Cancel
           </button>
         </div>
-        <div class="item item-divider bg-white uppercase color-red" style="border:none;">Matches</div>
+        <div class="item item-divider bg-white uppercase color-red" style="border:none;">
+          Matches
+          <span class="badge-tinder gotham-book">3</span>
+        </div>
+        <div class="padding">
+          <ks-swiper-container initial-slide="0" loop="false" show-nav-buttons="false" slides-per-view="4" space-between="5" pagination-clickable="false">
+              <ks-swiper-slide class="swiper-slide" ng-repeat="s in ['max', 'ben', 'perry', 'adam', 'mike']">
+                  <img ng-src="img/{{s}}.png" class="img-circled">
+              </ks-swiper-slide>
+          </ks-swiper-container>
+        </div>
         <hr>
         <div class="item item-divider bg-white uppercase color-red" style="border:none;">Messages</div>
         <ion-list>

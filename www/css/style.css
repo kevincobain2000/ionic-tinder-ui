@@ -266,6 +266,17 @@ textarea.about-me{
   font-size: 130%;
 }
 
+.img-circled{
+  border-radius: 50%;
+}
+.badge-tinder{
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-weight: 900;
+  padding: 3px 6px 3px 6px;
+}
+
 .tinder-buttons {
   position: absolute;
   left: calc(50% - 100px);
