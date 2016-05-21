@@ -141,7 +141,7 @@ angular.module('starter.controllers', [])
   function itsAMatch() {
     $ionicModal.fromTemplateUrl('templates/modals/match.html', {
       scope: $scope,
-      animation: 'animated fadeIn',
+      animation: 'animated _fadeOut',
       hideDelay:920
     }).then(function(modal) {
       $scope.modalMatch = modal;

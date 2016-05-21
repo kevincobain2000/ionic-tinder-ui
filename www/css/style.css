@@ -352,11 +352,6 @@ textarea.about-me{
 
   -webkit-filter: blur(20px);
 }
-.match-buttons{
-  margin-left: 17px;
-  margin-right: 17px;
-  margin-top:100px;
-}
 
 #search {
   position: relative;
@@ -367,9 +362,15 @@ textarea.about-me{
 }
 
 #search p, #search h1, #search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
+#search h1 { margin-top: 40px }
 #search h2 { margin-bottom: 40px }
 #search h5 { margin-top: 70px }
-#search p { margin-top: 10px }
+
+#search .match-buttons{
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top:110px;
+}
 
 
 /* CORE */
@@ -398,6 +399,8 @@ td-card {
 td-card .item{
   border-bottom-right-radius: 6px !important;
   border-bottom-left-radius: 6px !important;
+  box-shadow: 0 8px 6px -6px #ccc;
+  border-top: none;
 }
 
 td-card img {
@@ -405,6 +408,7 @@ td-card img {
   height: 85% !important;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  margin-bottom: -5px;
   object-fit: cover;
 }
 
@@ -795,6 +799,10 @@ td-card#end-card {
 .animated.modal.fadeIn.ng-leave {
     -webkit-animation-name:zoomOut;
     animation-name:zoomOut;
+}
+.animated.modal._fadeOut.ng-leave {
+    -webkit-animation-name:fadeOut;
+    animation-name:fadeOut;
 }
 .animated.modal.fadeInDown.ng-leave {
     -webkit-animation-name:fadeOutDown;
