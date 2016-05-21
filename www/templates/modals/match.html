@@ -1,0 +1,26 @@
+<ion-modal-view>
+  <ion-content class="itsAMatch">
+
+    <div id="bg" style="background-image: url('/img/ben.png');">
+      <div id="search-container">
+        <div id="search-bg" style="background-image: url('/img/ben.png');"></div>
+        <div id="search">
+          <h1>Its a Match!</h1>
+          <p class="font-default">You and Ben have liked each other</p>
+          <div class="text-center" style="margin-top:40px;">
+            <img ng-src="img/ben.png" height="150" width="150" class="img-matched animated bounceInLeft" alt="">
+            <img ng-src="img/max.png" height="150" width="150" class="img-matched animated bounceInRight" alt="">
+          </div>
+          <div class="text-center match-buttons" >
+            <button ng-click="hideMatch()" class="button button-block button-stable button-outline"><i class="ion-chatbubbles font-130"></i> Send Message</button>
+            <button ng-click="hideMatch()" class="button button-block button-stable button-outline" style="margin-top:17px;"><i class="ion-ios-browsers font-130"></i> Keep Playing</button>
+          </div>
+          <div class="text-center" style="margin-top:50px;">
+            <button class="button button-block button-clear button-stable font-default"><i class="ion-share font-130"></i> Tell Your Friends</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

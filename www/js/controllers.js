@@ -33,7 +33,26 @@ angular.module('starter.controllers', [])
     { image: 'http://c1.staticflickr.com/1/297/19072713565_be3113bc67_n.jpg' },
     { image: 'http://c1.staticflickr.com/1/536/19072713515_5961d52357_n.jpg' },
     { image: 'http://c4.staticflickr.com/4/3937/19072713775_156a560e09_n.jpg' },
-    { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' }
+    { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
   ];
 
 
@@ -106,7 +125,7 @@ angular.module('starter.controllers', [])
   function showProfile() {
     $ionicModal.fromTemplateUrl('templates/modals/profile.html', {
       scope: $scope,
-      animation: 'animated fadeIn',
+      animation: 'animated bounceInUp',
       hideDelay:920
     }).then(function(modal) {
       $scope.modalProfile = modal;
@@ -117,6 +136,19 @@ angular.module('starter.controllers', [])
     });
   };
 
+  function itsAMatch() {
+    $ionicModal.fromTemplateUrl('templates/modals/match.html', {
+      scope: $scope,
+      animation: 'animated bounceInUp',
+      hideDelay:920
+    }).then(function(modal) {
+      $scope.modalMatch = modal;
+      $scope.modalMatch.show();
+      $scope.hideMatch = function(){
+        $scope.modalMatch.hide();
+      }
+    });
+  };
 
     function showActionSheet() {
 

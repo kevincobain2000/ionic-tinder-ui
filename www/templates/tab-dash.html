@@ -89,12 +89,16 @@
                 - 'refreshCards()' reloads all cards that have NOT been discarded.
               ************************* -->
               <td-card id="end-card" drag="false">
-                <i class="icon ion-ios-refresh color-gray disable-user-behavior" ng-click="refreshCards()"></i>
+                <!-- <div class="tinder-refresh-button" ng-click="refreshCards()"></div> -->
+                <div class="disable-user-behavior" ng-click="refreshCards()">
+                  <div class="tinder-refresh-button" ng-click="like(false)"></div>
+                </div>
+                <!-- <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i> -->
               </td-card>
             </td-cards>
           </div>
 
-          <div class="tinder-buttons animated fadeIn" ng-if="cards.active">
+          <div class="tinder-buttons animated bounceIn" ng-if="cards.active">
               <div class="tinder-button" ng-click="like(false)"></div>
 
               <div class="info" ng-click="info()"></div>
@@ -114,6 +118,8 @@
           </button>
         </div>
         <div class="item item-divider bg-white uppercase color-red" style="border:none;">Matches</div>
+        <hr>
+        <div class="item item-divider bg-white uppercase color-red" style="border:none;">Messages</div>
         <ion-list>
             <ion-item class="item-light item-text-wrap item-avatar item-borderless item-icon-right" data-ng-repeat="blog in ['ben', 'max', 'mike', 'perry','ben', 'max', 'mike', 'perry'] track by $index" style="overflow:hidden;">
               <img ng-src="img/{{blog}}.png">

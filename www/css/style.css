@@ -19,6 +19,9 @@ img{
   font-family: 'gotham-book';
   src: url('../fonts/GothamRounded-Book.otf');
 }
+.font-default{
+  font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+}
 
 html, body, div, applet, object, iframe, h1, h2, h3,  blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, button, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
  font-family: 'gotham-medium';
@@ -48,6 +51,8 @@ textarea.about-me{
 
 .header-logo{
   margin-top: 4px;
+/*  height: 10px !important;
+  width: 100px;*/
 }
 .gotham-bold{
   font-family: 'gotham-bold';
@@ -246,7 +251,6 @@ textarea.about-me{
   border: 4px solid white;
 }
 
-/*buttons*/
 
 .tinder-actionsheet .action-sheet-group:first-child{
   background: #ccccc !important;
@@ -324,6 +328,48 @@ textarea.about-me{
 }
 
 
+.img-matched{
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#bg, #search-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+#search-container {
+  position: relative;
+}
+
+#search-bg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  -webkit-filter: blur(20px);
+}
+.match-buttons{
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top:100px;
+}
+
+#search {
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  height: 667px;
+  background: rgba(0,0,0,0.75);
+}
+
+#search p, #search h1, #search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
+#search h2 { margin-bottom: 40px }
+#search h5 { margin-top: 70px }
+#search p { margin-top: 10px }
+
 
 /* CORE */
 td-cards {
@@ -389,7 +435,7 @@ td-card img {
 
 .discard {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   padding: 10px 15px;
   color: #FFF;
   font-weight: bold;
@@ -403,11 +449,33 @@ td-card#end-card {
   border-radius: none;
 }
 
+
 #end-card i {
   position: absolute;
+  top: calc(50% - 45px);
+  left: calc(50% - 35px);
+  font-size: 80px;
+}
+
+
+.tinder-refresh-button{
+  width: 80px;
+  height:80px;
+  border-radius: 80px;
+  background: #FFF;
+  border: 6px solid #f0f0f0;
+  float: left;
+  box-shadow: 1px 1px 1px 0px #e9e9e9;
+  transition: background-size .2s ease-in-out;
+  position: absolute;
   top: calc(50% - 55px);
-  left: calc(50% - 40px);
-  font-size: 100px;
+  left: calc(50% - 45px);
+  background: black;
+  background: url(../img/refresh.png);
+  background-color: white;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .fade {
@@ -831,8 +899,8 @@ td-card#end-card {
     animation-name:zoomOutRight;
 }
 .animated.modal.zoomInUp.ng-leave {
-    -webkit-animation-name:zoomOutUp;
-    animation-name:zoomOutUp;
+    -webkit-animation-name:zoomOutDown;
+    animation-name:zoomOutDown;
 }
 
 .animated.modal.rollIn.ng-leave {
