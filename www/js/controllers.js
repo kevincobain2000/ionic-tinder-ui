@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
 
   $scope.myToggle = true;
 
-  $scope.slideIndex = 2
+  $scope.slideIndex = 1
 
 
   function slideTo(index){
