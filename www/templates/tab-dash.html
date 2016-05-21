@@ -13,7 +13,7 @@
 
       </ion-header-bar>
   <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="slideIndex" ion-slide-tabs>
-    <ion-slide>
+    <ion-slide on-drag-left="onRelease()" on-drag-right="onTouch()">
       <ion-content>
         <div class="profile-container">
           <img ng-click="showProfile()" ng-src="img/ben.png" class="profile-image" width="100">
@@ -112,7 +112,7 @@
               <div class="tinder-button  animated bounceIn" ng-click="like(true)"></div>
           </div>
     </ion-slide>
-    <ion-slide>
+    <ion-slide on-drag-left="onTouch()" on-drag-right="onRelease()">
       <ion-content>
         <div class="item-input-inset">
           <label class="item-input-wrapper">

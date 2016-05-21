@@ -27,6 +27,18 @@ angular.module('starter.controllers', [])
     $ionicSlideBoxDelegate.slide(index);
   }
 
+  $scope.$watch(function(scope) { return scope.slideIndex },
+    function(newValue, oldValue) {
+      switch(newValue) {
+        case 0:
+        case 2:
+          $ionicSlideBoxDelegate.enableSlide(false);
+          break;
+      }
+    }
+  );
+
+
   var cardTypes = [
     { image: 'http://c4.staticflickr.com/4/3924/18886530069_840bc7d2a5_n.jpg' },
     { image: 'http://c1.staticflickr.com/1/421/19046467146_548ed09e19_n.jpg' },
