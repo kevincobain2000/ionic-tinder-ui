@@ -16,6 +16,7 @@ angular.module('starter.controllers', [])
   $scope.showSettings = showSettings
   $scope.showActionSheet = showActionSheet
   $scope.slideTo = slideTo
+  $scope.deviceHeight  = window.innerHeight;
 
   $scope.myToggle = true;
 
@@ -34,9 +35,9 @@ angular.module('starter.controllers', [])
     { image: 'http://c1.staticflickr.com/1/536/19072713515_5961d52357_n.jpg' },
     { image: 'http://c4.staticflickr.com/4/3937/19072713775_156a560e09_n.jpg' },
     { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
-    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
-    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
-    // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
+    { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
     // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
     // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
     // { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' },
@@ -95,6 +96,7 @@ angular.module('starter.controllers', [])
     console.log('RIGHT SWIPE');
     var card = $scope.cards.active[index];
     $scope.cards.liked.push(card);
+    itsAMatch();
   };
 
   function like(param){
@@ -125,7 +127,7 @@ angular.module('starter.controllers', [])
   function showProfile() {
     $ionicModal.fromTemplateUrl('templates/modals/profile.html', {
       scope: $scope,
-      animation: 'animated bounceInUp',
+      animation: 'animated fadeIn',
       hideDelay:920
     }).then(function(modal) {
       $scope.modalProfile = modal;
@@ -139,7 +141,7 @@ angular.module('starter.controllers', [])
   function itsAMatch() {
     $ionicModal.fromTemplateUrl('templates/modals/match.html', {
       scope: $scope,
-      animation: 'animated bounceInUp',
+      animation: 'animated fadeIn',
       hideDelay:920
     }).then(function(modal) {
       $scope.modalMatch = modal;

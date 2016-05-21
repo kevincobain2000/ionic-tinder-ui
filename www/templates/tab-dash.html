@@ -68,7 +68,7 @@
           ************************* -->
           <div ng-if="cards.active">
             <td-cards on-touch="onTouch()" on-release="onRelease()" ng-click="showProfile()">
-              <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)">
+              <td-card ng-style="$index > 3 &&  {'display':'none'}" ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)">
                 <div class="image">
                   <div class="no-text">NOPE</div>
                   <div class="yes-text">LIKE</div>
@@ -80,7 +80,7 @@
                   ************************* -->
                   <!-- <div class="discard" ng-click="onClickTransitionOut(card)">DISCARD</div> -->
                   <img ng-src="{{ card.image }}">
-                  <h3 class="item">Adam, 26</h3>
+                  <h3 class="item">Adam, 26 {{$index}}</h3>
                 </div>
               </td-card>
               <!-- *************************
@@ -90,20 +90,20 @@
               ************************* -->
               <td-card id="end-card" drag="false">
                 <!-- <div class="tinder-refresh-button" ng-click="refreshCards()"></div> -->
-                <div class="disable-user-behavior" ng-click="refreshCards()">
-                  <div class="tinder-refresh-button" ng-click="like(false)"></div>
+                <div class="disable-user-behavior">
+                  <div class="tinder-refresh-button" ng-click="refreshCards()"></div>
                 </div>
                 <!-- <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i> -->
               </td-card>
             </td-cards>
           </div>
 
-          <div class="tinder-buttons animated bounceIn" ng-if="cards.active">
-              <div class="tinder-button" ng-click="like(false)"></div>
+          <div class="tinder-buttons" ng-if="cards.active">
+              <div class="tinder-button  animated bounceIn" ng-click="like(false)"></div>
 
-              <div class="info" ng-click="info()"></div>
+              <div class="info" ng-click="showProfile()"></div>
 
-              <div class="tinder-button" ng-click="like(true)"></div>
+              <div class="tinder-button  animated bounceIn" ng-click="like(true)"></div>
           </div>
     </ion-slide>
     <ion-slide>
