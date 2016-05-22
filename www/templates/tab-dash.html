@@ -50,16 +50,9 @@
 
     <ion-slide>
 
-<!--           <div class="radar" ng-if="!cards.length">
+          <div class="radar" ng-if="!cards.active.length">
             <img ng-src="img/adam.png" width="100" height="100">
           </div>
-          <div on-touch="onTouch()" on-release="onRelease()" class="layered-paper animated fadeIn" ng-if="cards.length" can-swipe="false" ng-click="showProfile()">
-              <img ng-src="img/ben.png">
-              <h3 class="item">Adam, 26</h3>
-          </div> -->
-
-
-
 
           <!-- *************************
             TD Cards
@@ -84,7 +77,7 @@
                     <h2>Adam, 26</h2>
                     <p>
                       Ionic Engineer
-                      <i class="ion-ios-book color-coral font-150 pull-right"></i>
+                      <!-- <i class="ion-ios-book color-coral font-150 pull-right"></i> -->
                     </p>
                   </div>
                 </div>
@@ -106,9 +99,7 @@
 
           <div class="tinder-buttons" ng-if="cards.active">
               <div class="tinder-button  animated bounceIn" ng-click="like(false)"></div>
-
               <div class="info" ng-click="showProfile()"></div>
-
               <div class="tinder-button  animated bounceIn" ng-click="like(true)"></div>
           </div>
     </ion-slide>

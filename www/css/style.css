@@ -252,6 +252,11 @@ textarea.about-me{
 }
 
 
+.action-sheet-up {
+  -webkit-animation: bounceInUp 1s linear;
+  -moz-animation: bounceInUp 1s linear;
+}
+
 .tinder-actionsheet .action-sheet-group:first-child{
   background: #ccccc !important;
   border-radius: 2px;
@@ -339,6 +344,51 @@ textarea.about-me{
   background-repeat: no-repeat;
 }
 
+.ptinder-buttons {
+  position: fixed;
+  left: calc(50% - 100px);
+  bottom:   0;
+  margin-bottom: 20px;
+  text-align: center;
+  z-index: 100;
+}
+
+.ptinder-button {
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  background: #FFF;
+  border: 4px solid #f0f0f0;
+  float: left;
+  box-shadow: 1px 1px 1px 0px #e9e9e9;
+  transition: background-size .2s ease-in-out;
+}
+
+.ptinder-button.activated {
+    box-shadow: inset 0 0 0 1px #e9e9e9,inset 0 1px 30px #e9e9e9;
+    background-size: 20px !important;
+    transition: background-size .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+.ptinder-button:nth-child(1) {
+  margin-left: 24px;
+  background: url(../img/delete.png);
+  background-color: white;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.ptinder-button:nth-child(2) {
+  margin-left: 24px;
+  background: url(../img/heart.png);
+  background-color: white;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 .img-matched{
   border-radius: 50%;
@@ -385,26 +435,27 @@ textarea.about-me{
 }
 
 
+.swiper-images{
+  width: 100% !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #e55 !important;
+}
+
+
 /* CORE */
 td-cards {
   display: block;
 }
 
 td-card {
-/*  position: absolute;
-  top: calc(35% - 150px);
-  left: calc(50% - 150px);
-  width: 300px;
-  height: 300px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-  border-radius: 3px;
-  background-color: transparent;*/
   background: white;
   margin-top: 70px;
   margin-left: 10px;
   margin-right: 10px;
   width: 96%;
-  height: 420px;
+  /*max-height: 320px !important;*/
   position:absolute;
   border-radius: 10px;  
 }
@@ -417,7 +468,7 @@ td-card .item{
 
 td-card img {
   width: 100%;
-  height: 85% !important;
+  /*height: 85% !important;*/
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin-bottom: -5px;
@@ -812,9 +863,22 @@ td-card#end-card {
     -webkit-animation-name:zoomOut;
     animation-name:zoomOut;
 }
+
 .animated.modal._fadeOut.ng-leave {
     -webkit-animation-name:fadeOut;
     animation-name:fadeOut;
+}
+.animated.modal._zoomOut.ng-leave {
+    -webkit-animation-name:zoomOut;
+    animation-name:zoomOut;
+}
+.animated.modal._bounceOutDown.ng-leave {
+    -webkit-animation-name:bounceOutDown;
+    animation-name:bounceOutDown;
+}
+.animated.modal._slideOutDown.ng-leave {
+    -webkit-animation-name:slideOutDown;
+    animation-name:slideOutDown;
 }
 .animated.modal.fadeInDown.ng-leave {
     -webkit-animation-name:fadeOutDown;

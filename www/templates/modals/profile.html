@@ -1,8 +1,11 @@
 <ion-modal-view>
   <ion-content>
     <div class="list">
-      <img class="" ng-src="img/ben.png" alt="" width="100%" ng-click="hideProfile()">
-
+      <ks-swiper-container initial-slide="0" pagination-is-active="true" pagination-cls="color-red" loop="false" show-nav-buttons="false" parallax="true" slides-per-view="1" space-between="0" pagination-clickable="false">
+          <ks-swiper-slide class="swiper-slide" ng-repeat="s in ['max', 'ben', 'perry', 'adam', 'mike']">
+              <img ng-src="img/{{s}}.png" class="swiper-images" ng-click="hideProfile()">
+          </ks-swiper-slide>
+      </ks-swiper-container>
       <ion-list class="list-borderless">
         <ion-item class="item-icon-right">
           <h2 class="font-130">Ben, 30</h2>
@@ -10,7 +13,7 @@
           <i class="icon ion-android-more-vertical color-red bold" ng-click="showActionSheet()"></i>
         </ion-item>
       </ion-list>
-      <div class="padding">
+      <div class="padding animated bounceInUp">
           <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -37,7 +40,11 @@
         <button class="button margin-top-5 button-outline button-small button-assertive">Meanwhile in Australia</button>
         <button class="button margin-top-5 button-outline button-small button-assertive">GaijinPot</button>
       </div>
-
     </div>
+    <p style="margin-top: 30px;">&nbsp;</p>
   </ion-content>
+  <div class="ptinder-buttons">
+      <div class="ptinder-button  animated fadeInRightBig" ng-click="like(false)"></div>
+      <div class="ptinder-button  animated fadeInLeftBig" ng-click="like(true)"></div>
+  </div>
 </ion-modal-view>
