@@ -50,7 +50,7 @@
 
     <ion-slide>
 
-          <div class="radar" ng-if="!cards.active.length">
+          <div class="radar" ng-if="!cards.active.length" ng-click="refreshCards()">
             <img ng-src="img/adam.png" width="100" height="100">
           </div>
 
@@ -90,7 +90,7 @@
               <td-card id="end-card" drag="false">
                 <!-- <div class="tinder-refresh-button" ng-click="refreshCards()"></div> -->
                 <div class="disable-user-behavior">
-                  <div class="tinder-refresh-button" ng-click="refreshCards()"></div>
+                  <!-- <div class="tinder-refresh-button" ng-click="refreshCards()"></div> -->
                 </div>
                 <!-- <i class="icon ion-ios-refresh disable-user-behavior" ng-click="refreshCards()"></i> -->
               </td-card>
