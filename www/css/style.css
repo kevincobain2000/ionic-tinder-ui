@@ -252,19 +252,15 @@ textarea.about-me{
 }
 
 
-.action-sheet-up {
-  -webkit-animation: bounceInUp 1s linear;
-  -moz-animation: bounceInUp 1s linear;
-}
-
 .tinder-actionsheet .action-sheet-group:first-child{
   background: #ccccc !important;
   border-radius: 2px;
 }
 .tinder-actionsheet .action-sheet-group:last-child{
   background: #ff6961 !important;
-  color:white !important;
+  color: white !important;
 }
+
 .tinder-actionsheet .button{
   color: #ff6961 !important;
   font-family: 'gotham-book';
