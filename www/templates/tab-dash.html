@@ -1,4 +1,4 @@
-<ion-view view-title="Dashboard" hide-nav-bar="true">
+<ion-view view-title="Tinder" hide-nav-bar="true">
       <ion-header-bar align-title="center" class="bar-stable">
 
         <div class="buttons" ng-click="slideTo(0)">
@@ -128,7 +128,7 @@
         <hr>
         <div class="item item-divider bg-white uppercase color-red" style="border:none;">Messages</div>
         <ion-list>
-            <ion-item class="item-light item-text-wrap item-avatar item-borderless item-icon-right" data-ng-repeat="blog in ['ben', 'max', 'mike', 'perry','ben', 'max', 'mike', 'perry'] track by $index" style="overflow:hidden;">
+            <ion-item class="item-light item-text-wrap item-avatar item-borderless item-icon-right" data-ng-repeat="blog in ['ben', 'max', 'mike', 'perry','ben', 'max', 'mike', 'perry'] track by $index" style="overflow:hidden;" ng-href="#/tab/dash/1">
               <img ng-src="img/{{blog}}.png">
               <h2 class="capitalize font-120">{{blog}}</h2>
               <p class="capitalize color-gray">Sent you a message</p>

@@ -69,6 +69,15 @@ angular.module('starter', ['ionic',
       }
     }
   })
+  .state('tab.dash-match', {
+    url: '/dash/:matchId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash-match.html',
+        controller: 'MatchCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',
