@@ -1086,7 +1086,7 @@ img.profile-pic.right {
 .chat-bubble {
   border-radius: 5px;
   display: inline-block;
-  padding: 10px 18px;
+  padding: 6px 10px;
   position: relative;
   margin: 10px;
   max-width: 80%;
@@ -1147,9 +1147,17 @@ img.profile-pic.right {
   top: -3px;
 }
 
-input, textarea, .item-input, .item-input-wrapper {
+/*input, textarea, .item-input, .item-input-wrapper {
   background-color: white !important;
   max-height: 30px;
+  width: 100%;
+}
+*/
+
+.message-box {
+  background-color: white !important;
+  max-height: 30px;
+  width: 100%;
 }
 
 
