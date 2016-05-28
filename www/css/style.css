@@ -1064,11 +1064,13 @@ img.profile-pic.right {
 
 .message {
   font-size: 14px;
+  font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
 }
 
 .message-detail {
   white-space: nowrap;
   font-size: 14px;
+
 }
 
 .bar.item-input-inset .item-input-wrapper input {
@@ -1086,7 +1088,7 @@ img.profile-pic.right {
 .chat-bubble {
   border-radius: 5px;
   display: inline-block;
-  padding: 6px 10px;
+  padding: 6px 6px 6px 6px;
   position: relative;
   margin: 10px;
   max-width: 80%;
