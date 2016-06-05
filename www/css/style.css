@@ -260,6 +260,10 @@ textarea.about-me{
   background: #ff6961 !important;
   color: white !important;
 }
+.tinder-actionsheet .action-sheet-cancel button{
+  background: #ff6961 !important;
+  color: white !important;
+}
 
 .tinder-actionsheet .button{
   color: #ff6961 !important;
