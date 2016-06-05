@@ -6,6 +6,7 @@ angular.module('starter.controllers', [])
                                 , $ionicModal
                                 , $ionicSlideBoxDelegate
                                 , $ionicActionSheet
+                                , $ionicPopup
                                 , TDCardDelegate
                                 , $timeout) {
   $scope.like = like
@@ -20,8 +21,29 @@ angular.module('starter.controllers', [])
 
   $scope.myToggle = true;
 
-  $scope.slideIndex = 2
+  $scope.slideIndex = 0
 
+  $scope.showConfirm = function() {
+   var confirmPopup = $ionicPopup.confirm({
+     title: 'Consume Ice Cream',
+     // template: 'Are you sure you want to eat this ice cream?',
+     templateUrl:'templates/popups/select-countries.html',
+     cssClass: 'animated bounceInUp dark-popup',
+     okType: 'button-small button-dark bold',
+     okText: 'Save',
+     cancelType: 'button-small'
+   });
+
+   confirmPopup.then(function(res) {
+     if(res) {
+       console.log('You are sure');
+     } else {
+       console.log('You are not sure');
+     }
+   });
+  };
+
+  $scope.showConfirm()
 
   function slideTo(index){
     $ionicSlideBoxDelegate.slide(index);
