@@ -60,6 +60,15 @@ textarea.about-me{
   background: rgba(255, 255, 255, 1) !important;
 }
 
+.dark-popup.popup-container .popup-head {
+/*    width:100px;
+    height:100px;
+    border-top:1px solid black;
+    border-top-left-radius:100px;
+    border-top-right-radius:100px;*/
+    border-bottom: none;
+    margin-bottom: 11px;
+}
 .dark-popup.popup-container .popup-title {
   text-align: left;
   padding-left: 10px;
@@ -73,6 +82,8 @@ textarea.about-me{
 
 .dark-popup.popup-container .popup-body {
   margin-bottom: 40px;
+  padding: 0px;
+  padding-left: 10px;
 }
 .dark-popup.popup-container .button {
   border-radius: 5px !important;
@@ -82,10 +93,11 @@ textarea.about-me{
   font-size: 105%;
 }
 
-.radio-content .item-content{
+.radio-content .item-content span{
   color: #4d4f53 !important;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 95%;
+  font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
 }
 
 .header-logo{
