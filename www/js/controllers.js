@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
    });
   };
 
-  $scope.showConfirm()
+  // $scope.showConfirm()
 
   function slideTo(index){
     $ionicSlideBoxDelegate.slide(index);
