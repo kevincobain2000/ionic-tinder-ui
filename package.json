@@ -10,8 +10,11 @@
     "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
+    "@ionic/cli-plugin-gulp": "1.1.1",
+    "@ionic/cli-plugin-ionic1": "2.1.1",
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
+    "ionic": "3.7.0",
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
