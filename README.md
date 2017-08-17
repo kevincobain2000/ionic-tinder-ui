@@ -18,4 +18,3 @@ Complete Tinder UI is work in Progress
 
 - Swipe: https://github.com/loringdodge/ionic-ion-tinder-cards-2
 - Chat: http://codepen.io/rossmartin/pen/XJmpQr
-
